@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "BlunderBot",
+  "version": "1.0",
+  "description": "The all in one chess streamer's companion.",
+  "icons": {
+    "48": "images/icon.png"
+  },
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lichess.org/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["/images/*"],
+      "matches": ["https://lichess.org/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
