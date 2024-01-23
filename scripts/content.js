@@ -6,7 +6,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function changeMyKingStyle() {
-  const kingImage = chrome.runtime.getURL('images/kings/cool.png'); // Path to your local king image
+  // const kingImage = chrome.runtime.getURL('images/kings/cool.png'); // Path to your local king image
+  const kingImage = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2Q4cmU4dmF2Y3oyNHJtb3AxZTA2ZHd2ZmswbzlnOTYyb2RiMGZ0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XMmf6i3xuKZiPMvNZe/giphy.gif"
   const myColor = 'white'; // Your piece color
 
   const styleTag = document.createElement('style');
